@@ -1,0 +1,13 @@
+<div class="container text-center">
+  <div class="card mb-3">
+    <h1><%= @restaurant.name %></h1>
+    <h3><%= @restaurant.category %></h3>
+    <p> <%=  @restaurant.address %> / <%= @restaurant.phone_number %></p>
+    <h5 class="btn btn-warning"><%= link_to 'Leave a review', new_restaurant_review_path(@restaurant) %></h5>
+    <ul class="inline-list">
+      <li class="list-inline-item"><%= link_to 'Back', restaurants_path %> </li>
+      <li class="list-inline-item"><%= link_to 'Edit', edit_restaurant_path(@restaurant) %></li>
+      <li class="list-inline-item"><%= link_to 'Delete', restaurant_path(@restaurant), method: :delete, data: {confirm: "Are you sure"}%> </li>
+    </ul>
+  </div>
+</div>
