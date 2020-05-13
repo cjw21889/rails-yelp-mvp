@@ -1,5 +1,5 @@
 <div class="container mt-3">
-
+<h1>leave a review for <%=@restaurant.name %></h1>
 <%= simple_form_for [ @restaurant, @review ] do |f| %>
   <%= f.input :rating %>
   <%= f.input :content %>

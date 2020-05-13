@@ -10,4 +10,13 @@
       <li class="list-inline-item"><%= link_to 'Delete', restaurant_path(@restaurant), method: :delete, data: {confirm: "Are you sure"}%> </li>
     </ul>
   </div>
+
+  <% @restaurant.reviews.each do |review| %>
+    <div class="card review-card mb-3">
+      <h3><%= review.rating %></h3>
+      <p><%= review.content %></p>
+      <%= link_to 'delete', review_path(review), method: :delete %>
+    </div>
+  <% end %>
+
 </div>
